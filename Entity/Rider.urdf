@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="rider">
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.15 0.15 1.70"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.85"/>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.15 0.15 1.70"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.85"/>
+    </collision>
+    <inertial>
+      <mass value="70.0"/>
+      <origin xyz="0 0 0.85"/>
+      <inertia ixx="10.0" ixy="0.0" ixz="0.0" iyy="10.0" iyz="0.0" izz="10.0"/>
+    </inertial>
+  </link>
+
+</robot>

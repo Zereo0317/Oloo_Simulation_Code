@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<robot name="e_scooter">
+  <!-- Base Link -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.925 0.3 0.1"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.925 0.3 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="10"/>
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+    </inertial>
+  </link>
+
+  <!-- Front Wheel -->
+  <link name="front_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1 0 0 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01125" ixy="0" ixz="0" iyy="0.01125" iyz="0" izz="0.01125"/>
+    </inertial>
+  </link>
+
+  <!-- Rear Wheel -->
+  <link name="rear_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.15" length="0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01125" ixy="0" ixz="0" iyy="0.01125" iyz="0" izz="0.01125"/>
+    </inertial>
+  </link>
+
+  <!-- Front Bracket Left -->
+  <link name="front_bracket_left">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Front Bracket Right -->
+  <link name="front_bracket_right">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Rear Bracket Left -->
+  <link name="rear_bracket_left">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Rear Bracket Right -->
+  <link name="rear_bracket_right">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.2"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+
+  <!-- Front Suspension -->
+  <link name="front_suspension">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.8"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.8"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Handlebar Vertical Part -->
+  <link name="handlebar_vertical">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.8"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.8"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Handlebar Horizontal Grips -->
+  <link name="handlebar_grips">
+    <visual>
+      <geometry>
+        <cylinder radius="0.05" length="0.5"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.05" length="0.5"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.5"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+  </link>
+
+  <!-- Front Wheel Joint -->
+  <joint name="front_wheel_joint" type="continuous">
+    <parent link="front_bracket_left"/>
+    <child link="front_wheel"/>
+    <origin xyz="0 0 0" rpy="0 1.57 0"/> <!-- Adjust orientation -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Rear Wheel Joint -->
+  <joint name="rear_wheel_joint" type="continuous">
+    <parent link="rear_bracket_left"/>
+    <child link="rear_wheel"/>
+    <origin xyz="0 0 0" rpy="0 1.57 0"/> <!-- Adjust orientation -->
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- Front Bracket Left Joint -->
+  <joint name="front_bracket_left_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_bracket_left"/>
+    <origin xyz="0.45 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Front Bracket Right Joint -->
+  <joint name="front_bracket_right_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_bracket_right"/>
+    <origin xyz="0.45 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Rear Bracket Left Joint -->
+  <joint name="rear_bracket_left_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_bracket_left"/>
+    <origin xyz="-0.45 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Rear Bracket Right Joint -->
+  <joint name="rear_bracket_right_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="rear_bracket_right"/>
+    <origin xyz="-0.45 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Front Suspension Joint -->
+  <joint name="front_suspension_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="front_suspension"/>
+    <origin xyz="0.4 0 0.05" rpy="0 -0.2 0"/> <!-- Tilt the handlebar towards the body -->
+  </joint>
+
+  <!-- Handlebar Vertical Part Joint -->
+  <joint name="handlebar_vertical_joint" type="fixed">
+    <parent link="front_suspension"/>
+    <child link="handlebar_vertical"/>
+    <origin xyz="0 0 0.8" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Handlebar Horizontal Grips Joint -->
+  <joint name="handlebar_grips_joint" type="fixed">
+    <parent link="handlebar_vertical"/>
+    <child link="handlebar_grips"/>
+    <origin xyz="0 0 0.4" rpy="0 0 1.57"/>
+  </joint>
+</robot>
