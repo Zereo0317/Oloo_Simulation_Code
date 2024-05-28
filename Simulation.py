@@ -8,7 +8,7 @@ import os
 import cv2
 
 # Ensure the directory exists
-os.makedirs('/SimData', exist_ok=True)
+os.makedirs('SimData/Videos', exist_ok=True)
 
 # Simulation class that manages the setup and execution
 class Simulation:
@@ -153,7 +153,7 @@ class Simulation:
         cam_yaw = 50
         cam_pitch = -35
 
-        video_writer = cv2.VideoWriter(f'/SimData/{scenario_name}.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (640, 480))
+        video_writer = cv2.VideoWriter(f'/SimData/Videos/{scenario_name}.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (640, 480))
 
         for i in range(1000):
             if i == 500 and scenario_function.__name__ == 'simulate_pothole':
@@ -173,7 +173,7 @@ class Simulation:
                 width=640, height=480, viewMatrix=p.computeViewMatrixFromYawPitchRoll(cam_target, cam_distance, cam_yaw, cam_pitch, 0, 2),
                 projectionMatrix=p.computeProjectionMatrixFOV(60, 640/480, 0.1, 100)
             )
-            img = np.reshape(img_arr, (height, width, 4))
+            img = img.astype(np.uint8)
             img = cv2.cvtColor(img, cv2.COLOR_RGBA2BGR)
             video_writer.write(img)
 
